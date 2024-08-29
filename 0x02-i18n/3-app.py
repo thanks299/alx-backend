@@ -19,21 +19,17 @@ app.url_map.strict_slashes = False
 babel = Babel(app)
 
 
+@babel.localeselector
 def get_locale() -> str:
     """Retrieves the locale for a web page.
     """
     return request.accept_languages.best_match(app.config["LANGUAGES"])
 
 
-babel.locale_selector_func = get_locale
-
-
 @app.route('/')
 def get_index() -> str:
     """The home/index page.
     """
-    # Pass a message as a parameter to the template
-    greeting = _("Hello world")
     return render_template('3-index.html')
 
 
