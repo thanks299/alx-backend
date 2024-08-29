@@ -84,7 +84,7 @@ def get_index() -> str:
     """
     g.time = format_datetime()
     # Pass a message as a parameter to the template
-    greeting = _("Hello, world")
+    greeting = _("Welcome, to, Holberton")
     return render_template('index.html')
 
 
