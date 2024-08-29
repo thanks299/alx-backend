@@ -30,6 +30,8 @@ def get_locale() -> str:
 def get_index() -> str:
     """The home/index page.
     """
+    # Pass a message as a parameter to the template
+    greeting = _("Hello, world")
     return render_template('3-index.html')
 
 
