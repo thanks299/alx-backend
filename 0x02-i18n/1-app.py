@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""A basic flask app
+"""A Basic Flask app.
 """
-from flask import Flask, render_template
 from flask_babel import Babel
+from flask import Flask, render_template
 
 
 class Config:
@@ -20,8 +20,8 @@ babel = Babel(app)
 
 
 @app.route('/')
-def index():
-    """A home page
+def get_index() -> str:
+    """The home/index page.
     """
     return render_template('1-index.html')
 
