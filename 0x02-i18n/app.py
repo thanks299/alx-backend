@@ -83,6 +83,7 @@ def get_index() -> str:
     """The home/index page.
     """
     g.time = format_datetime()
+    page_title = _("Welcome to Holberton")
     return render_template('index.html')
 
 
