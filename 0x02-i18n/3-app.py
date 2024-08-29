@@ -32,6 +32,8 @@ babel.locale_selector_func = get_locale
 def get_index() -> str:
     """The home/index page.
     """
+    # Pass a message as a parameter to the template
+    greeting = _("Hello, world")
     return render_template('3-index.html')
 
 
